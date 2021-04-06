@@ -13,3 +13,9 @@ body {
   height: 100%;
   /* height: 800px; */
 }
+
+.test {
+  background: red;
+  width: 50vw;
+  height: 100vh;
+}
