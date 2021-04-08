@@ -12,49 +12,61 @@ var color2 = {
 	alpha: 0
 };
 var radius = 50;
-var circle = new Path.Circle({
-	center: view.center,
-	radius: radius,
-	fillColor: {
-		gradient: {
-			stops: [[color1, 0], [color2, 1]],
-			radial: true
-		},
-		origin: view.center,
-		destination: view.center + (radius / 2)
-  }
-});
 
-var circleSymbol = new SymbolDefinition(circle);
+var circle;
+// circle = new Shape.Circle({
+// 	center: view.center,
+// 	radius: radius,
+// 	fillColor: {
+// 		gradient: {
+// 			stops: [[color1, 0], [color2, 1]],
+// 			radial: true
+// 		},
+// 		origin: view.center,
+// 		destination: view.center + (radius / 2)
+// 	}
+// });
+
+
 var circleInstance, mousePos;
-circleInstance = circleSymbol.place();
+var circleGroup = new Group();
 
 function onMouseMove(event) {
 	mousePos = event.point;
-	circleInstance = circleSymbol.place();
-	circleInstance.position = mousePos;
-	// console.log(circleInstance);
-	circleInstance.tween({
-		opacity: 1,
-		'definition.item.radius': 20
-	}, {
-		opacity: 0,
-		'definition.item.radius': 0
-	}, {
-		easing: 'easeInOutCubic',
-		duration: 2000
+	var circle = new Shape.Circle({
+		center: mousePos,
+		radius: radius,
+		fillColor: {
+			gradient: {
+				stops: [[color1, 0], [color2, 1]],
+				radial: true
+			},
+			origin: mousePos,
+			destination: mousePos + (radius / 2)
+	  }
 	});
 
-	if (circleInstance.opacity = 0) {
-		circleInstance.remove();
-	}
+	circle.tween({
+		opacity: 1,
+		'radius': radius,
+		'fillColor.destination': mousePos + (radius / 2)
+	}, {
+		opacity: 1,
+		'radius': 0,
+		'fillColor.destination': mousePos
+	}, {
+		easing: 'easeInOutCubic',
+		duration: 1000
+	});
+
+	circleGroup.addChild(circle);
 }
 
 function onMouseDown(event) {
 	randomHue = Math.random() * 360;
 	color1.hue = randomHue;
 	color2.hue = randomHue;
-	circleInstance.definition.item.fillColor.gradient = {
+	circle.fillColor.gradient = {
 		stops: [[color1, 0], [color2, 1]],
 		radial: true
   };

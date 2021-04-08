@@ -2,7 +2,7 @@ tool.minDistance = 10;
 tool.maxDistance = 45;
 
 var brushColor = Math.random() * 360;
-var brushTip = new Path.Circle(view.center, 20);
+var brushTip = new Path.Circle(view.center, 10);
 brushTip.fillColor = {
 	hue: brushColor,
 	saturation: 1,
@@ -44,6 +44,7 @@ function onMouseUp(event) {
 		brightness: 1
 	};
 	brushTip.bringToFront();
+  brushTip.position = event.point;
 }
 
 function onMouseMove(event) {
