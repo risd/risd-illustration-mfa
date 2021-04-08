@@ -37,6 +37,10 @@ body {
   text-decoration: none;
 }
 
+a.active {
+  background: rgb(63, 54, 195);
+}
+
 .option-links a:hover {
   background: rgb(63, 54, 195);
 }
