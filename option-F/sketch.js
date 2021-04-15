@@ -1,18 +1,8 @@
-var randomHue = Math.random() * 360;
-var color1 = {
-	hue: randomHue,
-	saturation: 1,
-	brightness: 1,
-	alpha: 1
-};
-var color2 = {
-	hue: randomHue,
-	saturation: 1,
-	brightness: 1,
-	alpha: 0
-};
-var radius = 50;
-
+var color1 = new Color(1.0, 0.9, 0.22);
+var color2 = new Color(1.0, 0.9, 0.22, 0);
+// vec3(1.0, 0.9, 0.22)
+var radius = 100;
+//
 var circle, circleInstance, mousePos, tween;
 var circleGroup = new Group();
 
@@ -45,16 +35,6 @@ function onMouseMove(event) {
 	});
 
 	circleGroup.addChild(circle);
-}
-
-function onMouseDown(event) {
-	randomHue = Math.random() * 360;
-	color1.hue = randomHue;
-	color2.hue = randomHue;
-	circle.fillColor.gradient = {
-		stops: [[color1, 0], [color2, 1]],
-		radial: true
-  };
 }
 
 function onFrame(event) {

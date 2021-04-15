@@ -15,8 +15,13 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -10;
+  z-index: -100;
   cursor: pointer;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
 }
 
 .option-links {
@@ -49,7 +54,7 @@ a.active {
   margin: 3rem;
   width: 50%;
   position: absolute;
-  right: 0;
+  /* right: 0; */
 }
 
 .titleContainer {
@@ -68,4 +73,28 @@ a.active {
 
 .textBlock {
   font-size: 1.5rem;
+}
+
+
+.content-background {
+  margin: 3rem;
+}
+
+.option-links-background {
+  display: inline-block;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.background-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -50;
+}
+
+.background-image img {
+  width: 100vw;
 }
