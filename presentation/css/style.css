@@ -10,7 +10,19 @@ a {
 }
 
 button {
+  background-color:#535353;
+	border:0px solid #000000;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
   cursor: url('../img/pointer.png'), auto;
+}
+
+button:hover {
+  background-color:#797979;
 }
 
 /* canvas[resize] {
@@ -114,4 +126,10 @@ a.active {
 
 .background-image img {
   width: 100vw;
+}
+
+.buttons {
+  position: fixed;
+  left: 2rem;
+  top: 2rem;
 }
