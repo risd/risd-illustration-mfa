@@ -14,7 +14,7 @@ var radius = 50;
 for (var i = 0, l = ballPositions.length; i < l; i++) {
 	var circlePath = new Path.Circle({
 		center: ballPositions[i],
-		radius: 50
+		radius: 100
 	});
 	circlePaths.push(circlePath);
 }
