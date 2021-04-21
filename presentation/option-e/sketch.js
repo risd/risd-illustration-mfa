@@ -31,7 +31,7 @@ function onMouseMove(event) {
 		'fillColor.destination': mousePos
 	}, {
 		easing: 'easeInOutCubic',
-		duration: 3000
+		duration: 4000
 	});
 
 	circleGroup.addChild(circle);
