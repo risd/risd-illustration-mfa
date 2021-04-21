@@ -44,6 +44,10 @@ button:hover {
   background-color: #D9D9D9;
 }
 
+.darkest {
+  background-color: #58595B;
+}
+
 #myCanvas {
   width: 100vw;
   height: 100vh;
