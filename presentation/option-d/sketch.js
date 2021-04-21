@@ -1,6 +1,6 @@
-var color1 = new Color(0.63, 0.22, 0.94);
-var color2 = new Color(0.63, 0.22, 0.94, 0);
-// vec3(1.0, 0.9, 0.22)
+var color1 = new Color(0.76, 0.0, 0.51);
+var color2 = new Color(0.76, 0.0, 0.51, 0);
+// vec3(0.76, 0.0, 0.51)
 var radius = 200;
 
 var circle, circleInstance, mousePos, tween;
