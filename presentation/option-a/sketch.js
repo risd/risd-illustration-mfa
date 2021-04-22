@@ -1,8 +1,14 @@
-var color1 = new Color(0.4, 1.0, 0.4);
-var color2 = new Color(0.4, 1.0, 0.4, 0);
-// vec3(1.0, 0.9, 0.22)
-var radius = 100;
-//
+if (Modernizr.touchevents) {
+  console.log("supported");
+} else {
+	console.log("not supported");
+}
+
+var color1 = new Color(1.0, 0.86, 0.38);
+var color2 = new Color(1.0, 0.86, 0.38, 0);
+// vec3(1.0, 0.86, 0.38)
+var radius = 200;
+
 var circle, circleInstance, mousePos, tween;
 var circleGroup = new Group();
 
@@ -18,7 +24,7 @@ function onMouseMove(event) {
 			},
 			origin: mousePos,
 			destination: mousePos + (radius / 2)
-	  }
+		}
 	});
 
 	tween = circle.tween({
@@ -31,7 +37,7 @@ function onMouseMove(event) {
 		'fillColor.destination': mousePos
 	}, {
 		easing: 'easeInOutCubic',
-		duration: 2000
+		duration: 4000
 	});
 
 	circleGroup.addChild(circle);
