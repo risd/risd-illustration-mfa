@@ -73,42 +73,27 @@ button:hover {
 #bottomGradient {
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle, rgba(255,219,96,1) 0%, rgba(88,89,91,1) 58%);
   position: fixed;
   top: 0;
   left: 0;
   z-index: -100;
 }
 
-/* #bottomGradient {
-  width: 100vw;
-  height: 100vh;
-  background: radial-gradient(circle, rgba(88,89,91,1) 58%, rgba(255,219,96,1) 100%);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100;
-} */
+.lightGray #bottomGradient {
+  background: radial-gradient(circle, rgba(160, 56, 238,1) 0%, rgba(160, 56, 238,0) 58%);
+}
 
-/* #bottomGradient {
-  width: 100vw;
-  height: 30vh;
-  background: linear-gradient(0deg, rgba(255,219,96,0) 0%, rgba(255,219,96,1) 100%);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100;
-} */
+.darkGray #bottomGradient {
+  background: radial-gradient(circle, rgba(214, 163, 255,1) 0%, rgba(214, 163, 255,0) 58%);
+}
 
-/* #bottomGradient {
-  width: 100vw;
-  height: 30vh;
-  background: linear-gradient(0deg, rgba(255,219,96,1) 0%, rgba(255,219,96,0) 100%);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: -100;
-} */
+.brown #bottomGradient {
+  background: radial-gradient(circle, rgba(221, 206, 193,1) 0%, rgba(221, 206, 193,0) 58%);
+}
+
+.purple #bottomGradient {
+  background: radial-gradient(circle, rgba(214, 163, 255,1) 0%, rgba(214, 163, 255,0) 58%);
+}
 
 .mod_no-touchevents #bottomGradient {
   display: none;
