@@ -4,9 +4,9 @@ if (Modernizr.touchevents) {
 	console.log("not supported");
 }
 
-var color1 = new Color(0.84, 0.64, 1.0);
-var color2 = new Color(0.84, 0.64, 1.0, 0);
-// vec3(0.84, 0.64, 1.0)
+var color1 = new Color(0.87, 0.81, 0.76);
+var color2 = new Color(0.87, 0.81, 0.76, 0);
+// vec3(0.87, 0.81, 0.76)
 var radius = 200;
 
 var circle, circleInstance, mousePos, tween;

@@ -36,16 +36,16 @@ button:hover {
     height: 100%;
 } */
 
-.light {
-  background-color: #F7F7F7;
-}
-
-.dark {
-  background-color: #D9D9D9;
-}
-
-.darkest {
+.darkGray {
   background-color: #58595B;
+}
+
+.brown {
+  background-color: #A27A58;
+}
+
+.purple {
+  background-color: #8E40B6;
 }
 
 #myCanvas {
@@ -191,6 +191,17 @@ a.active {
 }
 
 .background-image img {
+  width: 100vw;
+}
+
+.foreground-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.foreground-image img {
   width: 100vw;
 }
 
