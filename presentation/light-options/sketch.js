@@ -6,7 +6,7 @@ if (Modernizr.touchevents) {
 
 var color1 = new Color(0.63, 0.22, 0.94);
 var color2 = new Color(0.63, 0.22, 0.94, 0);
-// vec3(0.84, 0.64, 1.0)
+// rgb(160, 56, 238)
 var radius = 200;
 
 var circle, circleInstance, mousePos, tween;
