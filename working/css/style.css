@@ -41,7 +41,7 @@ button:hover {
 }
 
 .darkGray {
-  background-color: #58595B;
+  background-color: #3C3C3C;
 }
 
 .brown {
@@ -84,7 +84,7 @@ button:hover {
 }
 
 .darkGray #bottomGradient {
-  background: radial-gradient(circle, rgba(214, 163, 255,1) 0%, rgba(214, 163, 255,0) 58%);
+  background: radial-gradient(circle, rgba(60, 60, 60, 1) 0%, rgba(60, 60, 60, 0) 58%);
 }
 
 .brown #bottomGradient {
