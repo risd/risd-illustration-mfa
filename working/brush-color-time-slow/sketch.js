@@ -1,9 +1,3 @@
-if (Modernizr.touchevents) {
-  console.log("supported");
-} else {
-	console.log("not supported");
-}
-
 var color1 = new Color(0.84, 0.64, 1.0);
 var color2 = new Color(0.84, 0.64, 1.0, 0);
 // vec3(0.84, 0.64, 1.0)
