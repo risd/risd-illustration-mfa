@@ -1,13 +1,24 @@
+if (Modernizr.touchevents) {
+  console.log("supported");
+} else {
+	console.log("not supported");
+}
+
 var color1 = new Color(0.84, 0.64, 1.0);
 var color2 = new Color(0.84, 0.64, 1.0, 0);
 // vec3(0.84, 0.64, 1.0)
 // hsl(273, 100%, 81%)
 var radius = 200;
 
-var circle, circleInstance, mousePos, tween;
+var circle, circleInstance, mousePos, mouseHue, tween;
 var circleGroup = new Group();
 
 function onMouseMove(event) {
+  // mouseHue = (event.point.x / view.size.width) * 360;
+  mouseHue = ((event.point.x / (view.size.width * 3)) * 360) + (360 * 2 / 3);
+  console.log(mouseHue);
+  color1.hue = mouseHue;
+  color2.hue = mouseHue;
 	mousePos = event.point;
 	circle = new Shape.Circle({
 		center: mousePos,
@@ -39,6 +50,5 @@ function onMouseMove(event) {
 }
 
 function onFrame(event) {
-  color1.hue += .2;
-  color2.hue += .2;
+
 }
