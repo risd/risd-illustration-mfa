@@ -1,5 +1,5 @@
-var color1 = new Color(0.84, 0.64, 1.0, 0);
-var color2 = new Color(0.84, 0.64, 1.0, 1);
+var color1 = new Color(0.2, 0.64, 1.0, 0);
+var color2 = new Color(0.2, 0.64, 1.0, 1);
 // vec3(0.84, 0.64, 1.0)
 // hsl(273, 100%, 81%)
 
