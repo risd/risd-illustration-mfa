@@ -35,7 +35,33 @@ button:hover {
   background-color: #3C3C3C;
 }
 
+.brown {
+  background-color: #7C634E;
+}
+
+.teal {
+  background-color: #486E7E;
+}
+
+.purple {
+  background-color: #78607D;
+}
+
+.green {
+  background-color: #5C6A5C;
+}
+
 #brush {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  /* cursor: url('../img/cursor.png'); */
+}
+
+#brush-mobile {
   width: 100vw;
   height: 100vh;
   position: fixed;
