@@ -39,6 +39,6 @@ function onMouseMove(event) {
 }
 
 function onFrame(event) {
-  color1.hue += .3;
-  color2.hue += .3;
+  color1.hue += .1;
+  color2.hue += .1;
 }

@@ -31,28 +31,27 @@ button:hover {
   background-color:#797979;
 }
 
-/* canvas[resize] {
-    width: 100%;
-    height: 100%;
-} */
-
-.lightGray {
-  background-color: #D9D9D9;
-}
-
 .darkGray {
-  background-color: #58595B;
+  background-color: #3C3C3C;
 }
 
 .brown {
-  background-color: #A27A58;
+  background-color: #7C634E;
+}
+
+.teal {
+  background-color: #486E7E;
 }
 
 .purple {
-  background-color: #8E40B6;
+  background-color: #78607D;
 }
 
-#myCanvas {
+.green {
+  background-color: #5C6A5C;
+}
+
+#brush {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -62,44 +61,42 @@ button:hover {
   /* cursor: url('../img/cursor.png'); */
 }
 
-.mod_no-touchevents #myCanvas {
-  display: block;
-}
-
-.mod_touchevents #myCanvas {
-  display: none;
-}
-
-#bottomGradient {
+#brush-mobile {
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   z-index: -100;
+  /* cursor: url('../img/cursor.png'); */
 }
 
-.lightGray #bottomGradient {
-  background: radial-gradient(circle, rgba(160, 56, 238,1) 0%, rgba(160, 56, 238,0) 58%);
+.mod_no-touchevents #brush {
+  display: block;
 }
 
-.darkGray #bottomGradient {
-  background: radial-gradient(circle, rgba(214, 163, 255,1) 0%, rgba(214, 163, 255,0) 58%);
-}
-
-.brown #bottomGradient {
-  background: radial-gradient(circle, rgba(221, 206, 193,1) 0%, rgba(221, 206, 193,0) 58%);
-}
-
-.purple #bottomGradient {
-  background: radial-gradient(circle, rgba(214, 163, 255,1) 0%, rgba(214, 163, 255,0) 58%);
-}
-
-.mod_no-touchevents #bottomGradient {
+.mod_touchevents #brush {
   display: none;
 }
 
-.mod_touchevents #bottomGradient {
+#gradient {
+  width: 100vw;
+  height: 110vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+/* .darkGray #gradient {
+  background: radial-gradient(circle, rgba(213, 152, 127, 1) 0%, rgba(204, 124, 196, 1) 30%, rgba(119, 83, 187, 0) 60%);
+} */
+
+.mod_no-touchevents #gradient {
+  display: none;
+}
+
+.mod_touchevents #gradient {
   display: block;
 }
 
