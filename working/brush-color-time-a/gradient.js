@@ -5,17 +5,19 @@ var color2 = new Color(0.84, 0.64, 1.0, 1);
 
 var gradient, topLeft, bottomRight, gradientTween;
 
-topLeft = view.bounds.leftCenter;
-bottomRight = view.bounds.bottomRight;
+rectFrom = view.bounds.leftCenter;
+rectTo = view.bounds.bottomRight;
+gradientFrom = view.bounds.center;
+gradientTo = view.bounds.bottomCenter + new Point(0, 40);
 gradient = new Shape.Rectangle({
-	from: topLeft,
-	to: bottomRight,
+	from: rectFrom,
+	to: rectTo,
 	fillColor: {
 		gradient: {
 			stops: [[color1, 0.3], [color2, 1]],
 		},
-		origin: view.bounds.center,
-		destination: view.bounds.bottomCenter
+		origin: gradientFrom,
+		destination: gradientTo
 	}
 });
 console.log(gradient);
@@ -39,10 +41,10 @@ function onMouseDown() {
 }
 
 function onResize(event) {
-
-	gradient.size.height = view.bounds.size.height;
-	gradient.size.width = view.bounds.size.width;
-	gradient.position = view.bounds.center;
-	gradient.fillColor.origin = view.bounds.center;
-	gradient.fillColor.destination = view.bounds.bottomCenter;
+	// 
+	// gradient.size.height = view.bounds.size.height;
+	// gradient.size.width = view.bounds.size.width;
+	// gradient.position = view.bounds.center;
+	// gradient.fillColor.origin = view.bounds.center;
+	// gradient.fillColor.destination = view.bounds.bottomCenter;
 }
