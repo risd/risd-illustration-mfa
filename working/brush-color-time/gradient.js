@@ -14,7 +14,7 @@ gradient = new Shape.Rectangle({
 	to: rectTo,
 	fillColor: {
 		gradient: {
-			stops: [[color1, 0.3], [color2, 1]],
+			stops: [[color1, 0.3], [color2, .8]],
 		},
 		origin: gradientFrom,
 		destination: gradientTo
@@ -41,7 +41,7 @@ function onMouseDown() {
 }
 
 function onResize(event) {
-	// 
+	//
 	// gradient.size.height = view.bounds.size.height;
 	// gradient.size.width = view.bounds.size.width;
 	// gradient.position = view.bounds.center;
