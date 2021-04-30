@@ -18,6 +18,7 @@ gradient = new Shape.Rectangle({
 		destination: view.bounds.bottomCenter
 	}
 });
+console.log(gradient);
 
 gradientTween = gradient.tween({
 	opacity: 0
@@ -33,9 +34,15 @@ function onFrame(event) {
   color2.hue += .1;
 }
 
+function onMouseDown() {
+
+}
+
 function onResize(event) {
-	topLeft = view.bounds.leftCenter;
-	bottomRight = view.bounds.bottomRight;
-	gradient.from = topLeft;
-	gradient.to = bottomRight;
+
+	gradient.size.height = view.bounds.size.height;
+	gradient.size.width = view.bounds.size.width;
+	gradient.position = view.bounds.center;
+	gradient.fillColor.origin = view.bounds.center;
+	gradient.fillColor.destination = view.bounds.bottomCenter;
 }
