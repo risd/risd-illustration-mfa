@@ -87,6 +87,14 @@ button:hover {
   left: 0;
   z-index: -100;
 }
+#circles {
+  width: 100vw;
+  height: 110vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
 
 /* .darkGray #gradient {
   background: radial-gradient(circle, rgba(213, 152, 127, 1) 0%, rgba(204, 124, 196, 1) 30%, rgba(119, 83, 187, 0) 60%);
@@ -97,6 +105,13 @@ button:hover {
 }
 
 .mod_touchevents #gradient {
+  display: block;
+}
+.mod_no-touchevents #circles {
+  display: none;
+}
+
+.mod_touchevents #circles {
   display: block;
 }
 
