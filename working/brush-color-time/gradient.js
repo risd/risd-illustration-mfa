@@ -40,10 +40,5 @@ function onMouseDown() {
 }
 
 function onResize(event) {
-	//
-	// gradient.size.height = view.bounds.size.height;
-	// gradient.size.width = view.bounds.size.width;
-	// gradient.position = view.bounds.center;
-	// gradient.fillColor.origin = view.bounds.center;
-	// gradient.fillColor.destination = view.bounds.bottomCenter;
+
 }
