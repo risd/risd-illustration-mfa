@@ -28,6 +28,8 @@ body {
 
 #mobile {
   width: 100%;
+  overflow-y: hidden;
+  position: relative;
 }
 
 .mod_no-touchevents #mobile {
@@ -156,10 +158,12 @@ a.active {
 }
 
 .mobile-background {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  background-size: contain;
 }
 
 .mobile-background img {
@@ -167,12 +171,34 @@ a.active {
 }
 
 .mobile-brush {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  background-size: contain;
 }
 
 .mobile-brush img {
   width: 100%;
+}
+
+.circle-a {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+  position: fixed;
+  top: 600px;
+  left: 400px;
+}
+
+.circle-b {
+  width: 400px;
+  height: 400px;
+  background: blue;
+  border-radius: 50%;
+  position: fixed;
+  top: 600px;
+  left: 400px;
 }
