@@ -4,64 +4,11 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.tools {
-  cursor: url('../img/cursor.png'), auto;
-}
-
-.tools a {
-  cursor: url('../img/pointer.png'), auto;
-}
-
-button {
-  background-color:#535353;
-	border:0px solid #000000;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-}
-
-.tools button {
-  cursor: url('../img/pointer.png'), auto;
-}
-
-button:hover {
-  background-color:#797979;
-}
-
 .darkGray {
   background-color: #3C3C3C;
 }
 
-.brown {
-  background-color: #7C634E;
-}
-
-.teal {
-  background-color: #486E7E;
-}
-
-.purple {
-  background-color: #78607D;
-}
-
-.green {
-  background-color: #5C6A5C;
-}
-
 #brush {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  /* cursor: url('../img/cursor.png'); */
-}
-
-#brush-mobile {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -79,25 +26,30 @@ button:hover {
   display: none;
 }
 
-#gradient {
-  width: 100vw;
-  height: 110vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100;
+#mobile {
+  width: 100%;
+  overflow-y: hidden;
+  position: relative;
 }
 
-/* .darkGray #gradient {
-  background: radial-gradient(circle, rgba(213, 152, 127, 1) 0%, rgba(204, 124, 196, 1) 30%, rgba(119, 83, 187, 0) 60%);
-} */
-
-.mod_no-touchevents #gradient {
+.mod_no-touchevents #mobile {
   display: none;
 }
 
-.mod_touchevents #gradient {
+.mod_touchevents #mobile {
   display: block;
+}
+
+#desktop {
+  width: 100%;
+}
+
+.mod_no-touchevents #desktop {
+  display: block;
+}
+
+.mod_touchevents #desktop {
+  display: none;
 }
 
 nav {
@@ -158,7 +110,7 @@ a.active {
 
 
 .content-background {
-  margin: 3rem;
+  /* margin: 3rem; */
 }
 
 .option-links-background {
@@ -195,4 +147,58 @@ a.active {
   position: fixed;
   left: 2rem;
   top: 2rem;
+}
+
+.mobile-foreground {
+  width: 100%;
+}
+
+.mobile-foreground img {
+  width: 100%;
+}
+
+.mobile-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+.mobile-background img {
+  width: 100%;
+}
+
+.mobile-brush {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+.mobile-brush img {
+  width: 100%;
+}
+
+.circle-a {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+  position: fixed;
+  top: 600px;
+  left: 400px;
+}
+
+.circle-b {
+  width: 400px;
+  height: 400px;
+  background: blue;
+  border-radius: 50%;
+  position: fixed;
+  top: 600px;
+  left: 400px;
 }

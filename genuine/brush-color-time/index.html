@@ -4,20 +4,40 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.13/paper-full.min.js"></script>
     <script src="../js/modernizr-custom.js"></script>
-    <script type="text/paperscript" src="../js/brush.js" canvas="brush"></script>
-    <script type="text/paperscript" src="../js/gradient.js" canvas="gradient"></script>
+    <script type="text/paperscript" src="brush.js" canvas="brush"></script>
+    <!-- <script type="text/paperscript" src="gradient.js" canvas="gradient"></script> -->
   </head>
 
   <body class="darkGray">
     <canvas id="brush" resize></canvas>
-    <canvas id="gradient" resize></canvas>
+    <!-- <canvas id="gradient" resize></canvas> -->
     <main class="content-background">
-      <div class="background-image">
-        <img src="../img/illustrations-landing.png" alt="">
+      <div id="mobile">
+        <!-- <div class="circle-a rellax" data-rellax-speed="4"></div> -->
+        <!-- <div class="circle-b rellax" data-rellax-speed="4"></div> -->
+        <div class="mobile-brush rellax" data-rellax-speed="10" style="background-image:url('../img/mobile-brush.png')">
+          <!-- <img src="../img/mobile-brush.png" alt=""> -->
+        </div>
+        <div class="mobile-background rellax" data-rellax-speed="-20" style="background-image:url('../img/mobile-background.png')">
+          <!-- <img src="../img/mobile-background.png" alt=""> -->
+        </div>
+        <div class="mobile-foreground rellax"  data-rellax-speed="0">
+          <img src="../img/mobile-foreground.png" alt="">
+        </div>
       </div>
-      <div class="foreground-image">
-        <img src="../img/foreground-landing.png" alt="">
+      <div id="desktop">
+        <div class="background-image">
+          <img src="../img/illustrations-landing.png" alt="">
+        </div>
+        <div class="foreground-image">
+          <img src="../img/desktop-foreground.png" alt="">
+        </div>
       </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+      var rellax = new Rellax('.rellax');
+    </script>
   </body>
 </html>
